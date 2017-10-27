@@ -1,0 +1,35 @@
+.inputbox {
+  background-color: #AAAAAA;
+}
+
+.topbar {
+  width: 100%; 
+  border-bottom: 2rpx solid #777777; 
+  text-align: center; 
+  line-height: 80rpx;
+}
+
+.topbar-btn {
+  font-size: 30rpx; 
+  display: inline-block; 
+  width: 50%; 
+  color: #777777; 
+}
+
+.on{
+  color: #da7c0c; 
+  border-bottom: 5rpx solid #da7c0c;
+}
+
+.catlist {
+  background-color: #777777; 
+  margin:10px;
+}
+
+.detail_show {
+  display: block;
+}
+
+.detail_hide {
+  display: none;
+}

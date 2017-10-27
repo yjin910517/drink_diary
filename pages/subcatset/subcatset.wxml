@@ -1,0 +1,52 @@
+<view>
+
+<view class="topbar">
+   <view class="topbar-btn {{currentTab==0 ? 'on' : ''}}" bindtap="switchNav">一级分类</view>
+   <view class="topbar-btn {{currentTab==1 ? 'on' : ''}}">二级分类</view>
+</view>
+
+
+<picker mode="selector" bindchange="bindPickerChange" value="{{index}}" range="{{catId}}">
+    <view class="picker">
+    当前选择：{{alcType[index].id}}
+    </view>
+</picker>
+
+<view>
+    <text>--添加二级分类--</text>
+</view>
+<form bindsubmit="formBindsubmit">
+    <view style="display:flex;">
+        <label>类别名称：</label>
+        <input class="inputbox" name="secondLevel" placeholder="请输入二级类别名称" />
+    </view>
+    <view style="display:flex;">
+        <label>默认酒精含量（%）：</label>
+        <input class="inputbox" name="alc" placeholder="请输入0-100的数字" />
+    </view>
+    <view style="display:flex;">
+        <label>默认体积（ml）：</label>
+        <input class="inputbox" name="vol" placeholder="请输入大于0的数字" />
+    </view>
+    <view style="display:flex;margin-top:30px;">
+        <button style="width:30%;" formType="submit" >添加</button>
+    </view>
+</form>
+
+<view>
+    <text>--编辑二级分类--</text>
+</view>
+
+<block style="display: flex;" wx:for-items="{{alcType[index].value}}" wx:key="name" wx:for-index="idx">
+    <view class="catlist" data-idx="{{idx}}" bindtap="editDetail">{{item.name}} {{item.alc}}% {{item.vol}}ml</view>
+
+    <view class="{{item.isExpand ? 'detail_show' : 'detail_hide'}}">
+        <text>我是被隐藏的{{idx}}{{item.name}}</text>
+        <text>{{item.isExpand}}</text>
+        <button style="width:30%; display:inline-block" bindtap = "confirmDelete" data-idx="{{idx}}">删除</button>
+        <button style="width:60%; display:inline-block" bindtap = "setDefault" data-idx="{{idx}}">设为置顶类别</button>
+
+    </view>
+</block>
+
+</view>

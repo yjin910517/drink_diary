@@ -1,0 +1,20 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/additem/additem",
+    "pages/reportlist/reportlist",
+    "pages/catset/catset",
+    "pages/subcatset/subcatset",
+    "pages/itemdetail/itemdetail",
+    "pages/reportchart/reportchart",
+    "pages/more/more"
+  ],
+
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+
+}

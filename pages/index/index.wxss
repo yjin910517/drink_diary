@@ -1,0 +1,59 @@
+/**index.wxss**/
+.summary {
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  background-color: #3788BD;
+}
+
+.btnbox {
+  background-color: bisque;
+}
+
+.addbtn {
+  background-color: #3788BD;
+  color: white;
+  height: 50px;
+  line-height: 50px;
+  width: 70%;
+  text-align: center;
+  margin-left: 15%;
+  margin-top:10px;
+  border-radius:8px;
+}
+
+.recent {
+  margin-top:10px;
+  background-color:#3788BD;
+}
+
+.checkmore {
+  margin-left:5%;
+  margin-right:5%;
+  height:40px;
+  line-height:40px;
+  background-color: bisque;
+
+}
+
+.itemlist {
+  width:90%;
+  margin-left:5%;
+  margin-top:10px;
+  text-align:center;
+  background-color:chartreuse;
+}
+
+.detail {
+  height:30px;
+  line-height: 30px;
+  background-color:chartreuse;
+  text-align:left;
+}
+
+.date {
+  width:100%;
+  background-color:aqua;
+  font-weight:bold;
+
+}

@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view>
+  <view bindtap="chart" class="summary">
+    <text>WIP</text>
+  </view>
+
+  <view class="btnbox">
+      <view bindtap="itemAdd" class = "addbtn">
+          <text>添加新记录</text>
+      </view>
+  </view>
+
+  <view class="btnbox">
+      <view bindtap="catSet" class = "addbtn">
+          <text>自定义分类</text>
+      </view>
+  </view>
+
+  <view class="recent">
+    <view bindtap="checkReport" class="checkmore">
+      <text>查看更多明细 >></text>
+    </view>
+
+    <block  wx:for-items="{{recent}}" wx:key="uid" wx:for-index="idx">
+      <view data-idx="{{idx}}"  bindtap="seeDetail" class = "itemlist">
+        <view data-idx="{{idx}}" class = "date">
+          <text data-idx="{{idx}}">{{item.date}}</text>
+        </view>
+        <view data-idx="{{idx}}" class = "detail">
+          <text data-idx="{{idx}}">{{item.cat}} - {{item.subCat}}</text>
+        </view>
+        <view data-idx="{{idx}}" class = "detail">
+          <text data-idx="{{idx}}">{{item.vol}}ml * {{item.num}}</text>
+        </view>
+
+      </view>
+    </block>
+  </view>
+
+</view>
+

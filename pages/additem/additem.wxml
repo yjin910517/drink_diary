@@ -1,0 +1,65 @@
+<view>
+    <view class="picker-box">
+        <label class = "picker-label">一级类别：</label>
+        <picker mode="selector" bindchange="bindPickerChange" value="{{index}}" range="{{catId}}" class="picker">
+            <view>
+            当前选择：{{alcType[index].id}}
+            </view>
+        </picker>
+    </view>
+
+    <view class="picker-box">
+        <label class = "picker-label">二级类别：</label>
+        <picker mode="selector" bindchange="bindDrinkChange" value="{{drinkIdx}}" range="{{selectedCat}}" class="picker">
+            <view>
+            当前选择：{{selectedCat[drinkIdx]}}
+            </view>
+        </picker>
+    </view>
+
+    <view class="picker-box">
+        <label class = "picker-label">记录日期：</label>
+        <picker mode="date" value="{{dateValue}}" start="1999-01-01" end="2999-12-12" bindchange="datePickerBindchange" class="picker">
+            <view>
+            当前选择：{{dateValue}}
+            </view>
+        </picker>
+    </view>
+
+<form bindsubmit="formSubmit" class = "form-box">
+    <view class="picker-box">
+        <label class = "picker-label">单位体积ml：</label>
+        <input class="inputbox" name="vol" placeholder="{{picked.vol}}" />
+    </view>
+    <view class="picker-box">
+        <label class = "picker-label">数量：</label>
+        <input class="inputbox" name="num" placeholder="1" />
+    </view>
+    <view class="picker-box">
+        <label class = "picker-label">酒精含量%：</label>
+        <input class="inputbox" name="alc" placeholder="{{picked.alc}}" />
+    </view>
+    <view class="picker-box">
+        <label class = "picker-label">品牌：</label>
+        <input class="inputbox" name="brand" placeholder="选填" />
+    </view>
+
+    <view class="picker-box">
+        <label class = "picker-label">备注：</label>
+        <textarea class = "inputbox" name="comment" placeholder="选填，小于140字"/>
+    </view>
+
+    <view>
+        <button style="width:30%;" formType="submit" >添加</button>
+    </view>
+</form>
+
+<text>uid{{finalSubmission.uid}}</text>
+<text>已选一级类别{{finalSubmission.cat}}</text>
+<text>已选二级类别{{finalSubmission.subCat}}</text>
+<text>日期{{finalSubmission.date}}</text>
+<text>品牌{{finalSubmission.brand}}</text>
+<text>酒精{{finalSubmission.alc}}</text>
+<text>体积{{finalSubmission.vol}}</text>
+<text>备注{{finalSubmission.comment}}</text>
+</view>

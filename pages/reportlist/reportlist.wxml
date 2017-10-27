@@ -1,0 +1,24 @@
+<view class="container">
+    <text>报告筛选:</text>
+    <picker mode="date" value="{{startDate}}" start="1999-01-01" end="2999-12-12" bindchange="startDateChange">
+        <view class="picker">
+        起始日期: {{startDate}}
+        </view>
+    </picker>
+
+    <picker mode="date" value="{{endDate}}" start="1999-01-01" end="2999-12-12" bindchange="endDateChange">
+        <view class="picker">
+        截止日期: {{endDate}}
+        </view>
+    </picker>
+
+    <block style="display: flex;" wx:for-items="{{selectedReport}}" wx:key="uid" wx:for-index="idx">
+        <view class="reportlist" data-idx="{{idx}}" bindtap="seeDetail">
+            <text data-idx="{{idx}}" >id：{{idx}}</text>
+            <text data-idx="{{idx}}" >日期：{{item.date}}</text>
+            <text data-idx="{{idx}}" >类型：{{item.cat}} - {{item.subCat}}</text>
+            <text data-idx="{{idx}}" >体积：{{item.vol}}</text>
+        </view>
+
+    </block>
+</view>

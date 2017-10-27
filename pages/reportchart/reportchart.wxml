@@ -1,0 +1,7 @@
+<canvas class = 'line-canvas' canvas-id="lineCanvas"/>
+
+<view>
+    <text>今天是{{today}}\n</text>
+    <text>月首是{{monthStart}}\n</text>
+    <text>年首是{{yearStart}}\n</text>
+</view>

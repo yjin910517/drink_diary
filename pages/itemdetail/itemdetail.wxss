@@ -1,0 +1,26 @@
+
+.detail-box view {
+  vertical-align:top;
+  margin-top:5px;
+  text-align:left;
+  background-color:aqua;
+}
+
+
+.detail-box view label{
+  vertical-align:top;
+  margin-top:5px;
+  display: inline-block;
+  text-align:right;
+  width:30%;
+}
+
+.detail-box view view {
+  vertical-align:top;
+  margin-top:5px;
+  display: inline-block;
+  text-align:left;
+  margin-left:3%;
+  width:60%;
+  background-color:#DDDDDD;
+}

@@ -1,0 +1,34 @@
+<view>
+
+<view class="topbar">
+   <view class="topbar-btn {{currentTab==0 ? 'on' : ''}}">一级分类</view>
+   <view class="topbar-btn {{currentTab==1 ? 'on' : ''}}" bindtap="switchNav">二级分类</view>
+</view>
+
+<form bindsubmit="formBindsubmit">
+    <view style="display:flex;">
+        <label>类别名称：</label>
+        <input class="inputbox" name="firstLevel" placeholder="请输入类别名称" />
+    </view>
+    <view style="display:flex;margin-top:30px;">
+        <button style="width:30%;" formType="submit" >添加</button>
+    </view>
+</form>
+
+<view>
+    <text>--编辑一级分类--</text>
+</view>
+
+<block style="display: flex;" wx:for-items="{{alcType}}" wx:key="id" wx:for-index="idx">
+    <view class="catlist" data-idx="{{idx}}" bindtap="editDetail">{{item.id}}</view>
+
+    <view class="{{item.isExpand ? 'detail_show' : 'detail_hide'}}">
+        <text>我是被隐藏的{{idx}}{{item.id}}</text>
+        <text>{{item.isExpand}}</text>
+        <button style="width:30%; display:inline-block" bindtap = "confirmDelete" data-idx="{{idx}}">删除</button>
+        <button style="width:60%; display:inline-block" bindtap = "setDefault" data-idx="{{idx}}">设为置顶类别</button>
+    </view>
+</block>
+
+
+</view>

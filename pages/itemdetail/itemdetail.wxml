@@ -1,0 +1,59 @@
+<view>
+
+  <view class = "detail-box">
+    <view>
+      <label>条目添加时间：</label>
+      <view> {{itemDetail.recordTime}}</view>
+    </view>
+    <view>
+      <label>uid：</label>
+      <view> {{itemDetail.uid}}</view>
+    </view>
+    <view>
+      <label>日期：</label>
+      <view>{{itemDetail.date}}</view>
+    </view>
+    <view>
+      <label>一级类别：</label>
+      <view>{{itemDetail.cat}}</view>
+    </view>
+    <view>
+      <label>二级类别：</label>
+      <view>{{itemDetail.subCat}}</view>
+    </view>
+    <view>
+      <label>品牌：</label>
+      <view>{{itemDetail.brand}}</view>
+    </view>
+    <view>
+      <label>单位体积：</label>
+      <view>{{itemDetail.vol}}ml</view>
+    </view>
+    <view>
+      <label>数量：</label>
+      <view>{{itemDetail.num}}</view>
+    </view>
+    <view>
+      <label>酒精度数：</label>
+      <view>{{itemDetail.alc}}%</view>
+    </view>
+    <view>
+      <label>总体积：</label>
+      <view>{{itemDetail.num*itemDetail.vol}}ml</view>
+    </view>
+    <view>
+      <label>总酒精含量：</label>
+      <view>{{itemDetail.num*itemDetail.alc*itemDetail.vol*0.8/100}}g</view>
+    </view>
+    <view>
+      <label>备注：</label>
+      <view>{{itemDetail.comment}}</view>
+    </view>
+  </view>
+
+
+    <view style="display:flex;margin-top:10px;">
+        <button type="warn" bindtap = "confirmDelete" >删除</button>
+    </view>
+
+</view>
